@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3982AFF-6D78-4AFE-83E3-139A7A035311}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ConsumerSurveySystem</RootNamespace>
+    <AssemblyName>ConsumerSurveySystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SQLite.NET, Version=0.21.1869.3794, Culture=neutral, PublicKeyToken=c273bd375e695f9c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SQLite.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\Admin.cs" />
+    <Compile Include="classes\Product.cs" />
+    <Compile Include="classes\Question.cs" />
+    <Compile Include="classes\Respondent.cs" />
+    <Compile Include="classes\Survey.cs" />
+    <Compile Include="classes\User.cs" />
+    <Compile Include="database.cs" />
+    <Compile Include="frmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddProduct.Designer.cs">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddSurvey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddSurvey.Designer.cs">
+      <DependentUpon>frmAddSurvey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsumer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsumer.Designer.cs">
+      <DependentUpon>frmConsumer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsumerSurvey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsumerSurvey.Designer.cs">
+      <DependentUpon>frmConsumerSurvey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewQuestion.Designer.cs">
+      <DependentUpon>frmNewQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmResponses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResponses.Designer.cs">
+      <DependentUpon>frmResponses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSurvey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSurvey.Designer.cs">
+      <DependentUpon>frmSurvey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateProduct.Designer.cs">
+      <DependentUpon>frmUpdateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateSurvey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateSurvey.Designer.cs">
+      <DependentUpon>frmUpdateSurvey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateUser.Designer.cs">
+      <DependentUpon>frmUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlDropdown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDropdown.Designer.cs">
+      <DependentUpon>UserControlDropdown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlIntro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlIntro.Designer.cs">
+      <DependentUpon>UserControlIntro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlRadioButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlRadioButton.Designer.cs">
+      <DependentUpon>UserControlRadioButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlYesOrNo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlYesOrNo.Designer.cs">
+      <DependentUpon>UserControlYesOrNo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAddProduct.resx">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddSurvey.resx">
+      <DependentUpon>frmAddSurvey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsumer.resx">
+      <DependentUpon>frmConsumer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsumerSurvey.resx">
+      <DependentUpon>frmConsumerSurvey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewQuestion.resx">
+      <DependentUpon>frmNewQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResponses.resx">
+      <DependentUpon>frmResponses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSurvey.resx">
+      <DependentUpon>frmSurvey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateProduct.resx">
+      <DependentUpon>frmUpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateSurvey.resx">
+      <DependentUpon>frmUpdateSurvey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateUser.resx">
+      <DependentUpon>frmUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserControlDropdown.resx">
+      <DependentUpon>UserControlDropdown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlIntro.resx">
+      <DependentUpon>UserControlIntro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlRadioButton.resx">
+      <DependentUpon>UserControlRadioButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlYesOrNo.resx">
+      <DependentUpon>UserControlYesOrNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
